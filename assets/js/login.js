@@ -100,4 +100,5 @@ $(function () {
         location.href = '/index.html'
       }
     })
-    })
+  })
+})
