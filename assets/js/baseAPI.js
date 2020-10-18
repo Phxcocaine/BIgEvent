@@ -14,7 +14,7 @@ $.ajaxPrefilter(function (options) {
 
   // 3. 统一处理 用户返回的 未登录 错误
   options.complete = function (res) {
-    if (res.responseJSON.status === 1) {
+    if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败!') {
       // a.提示用户没有权限
       alert('对不起，您的登录已经失效，请重新登录！');
       // b. 删除 locastorage 中可能存在的伪造的 token
