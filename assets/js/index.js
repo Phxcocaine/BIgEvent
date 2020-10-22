@@ -31,14 +31,15 @@ function getUserInfo(token) {
             }
             // 调用 renderAvatar 渲染的用户头像
             renderAvatar(res.data)
-        }
+        },
     })
 }
 
 // 渲染用户头像
 function renderAvatar(user) {
-    // console.log(user);
+    console.log(user);
     var name = user.nickname || user.username;
+    console.log(name);
     $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
     // 按需渲染用户头像
     if (user.user_pic !== null) {
